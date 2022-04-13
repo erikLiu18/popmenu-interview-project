@@ -1,0 +1,86 @@
+[
+    {
+        "id": "01",
+        "title": "ShackBurger",
+        "description": "Cheeseburger with lettuce, tomato, ShackSauce",
+        "price": 7.29,
+        "url": "https://d2luv1saso99wi.cloudfront.net/SSApp_Burger-SingleShack-1_lg1545256405.jpeg"
+    },
+    {
+        "id": "02",
+        "title": "SmokeShack",
+        "description": "Cheeseburger with applewood-smoked bacon, chopped cherry peppers, ShackSauce",
+        "price": 9.09,
+        "url": "https://d2luv1saso99wi.cloudfront.net/SSApp_Burger-SmokeShack-2_lg1542806809.jpeg"
+    },
+    {
+        "id": "03",
+        "title": "Shroom Burger",
+        "description": "(Vegetarian) Crisp-fried portobello mushroom filled with melted muenster and cheddar cheeses, topped with lettuce, tomato, ShackSauce",
+        "price": 9.39,
+        "url": "https://d2luv1saso99wi.cloudfront.net/SSApp_Burger-ShroomBurger-1_lg1542806952.jpeg"
+    },
+    {
+        "id": "04",
+        "title": "Shack Stack",
+        "description": "Cheeseburger topped with a Shroom Burger with lettuce, tomato, ShackSauce",
+        "price": 13.19,
+        "url": "https://d2luv1saso99wi.cloudfront.net/SSApp_Burger-ShackStack-2_lg1542807055.jpeg"
+    },
+    {
+        "id": "05",
+        "title":"Buffalo Chicken",
+        "description":"Crispy, hand-breaded chicken breast covered in our Buffalo sauce, topped with our ranch sauce over pickles and shredded lettuce on a toasted potato bun",
+        "price": 9.39,
+        "url": "https://d2luv1saso99wi.cloudfront.net/2022_Q1_Buffalo_App-Menu-Product_1500x920_Sandwich_lg1645674276.jpeg"
+    },
+    {
+        "id": "06",
+        "title":"Chicken Shack",
+        "description":"Crispy chicken breast over lettuce, pickles, buttermilk herb mayo",
+        "price": 8.69,
+        "url": "https://d2luv1saso99wi.cloudfront.net/ChShack_App_lg1549281618.jpeg"
+    },
+    {
+        "id": "07",
+        "title": "Buffalo Spiced Fries",
+        "description": "Crispy crinkle cuts dusted with our Buffalo seasoning, served with our ranch sauce",
+        "price": 4.59,
+        "url": "https://d2luv1saso99wi.cloudfront.net/2022_Q1_Buffalo_App-Menu-Product_1500x920_Fries_lg1645674357.jpeg"
+    },
+    {
+        "id": "08",
+        "title": "Bacon Cheese Fries",
+        "description": "Topped with our cheese sauce and applewood-smoked bacon",
+        "price": 6.09,
+        "url": "https://d2luv1saso99wi.cloudfront.net/SSApp_Fries-BaconCheese-2_lg1542810002.jpeg"
+    },
+    {
+        "id": "09",
+        "title": "Chicken Bites",
+        "description": "Crispy, whole white meat bites served with honey mustard or BBQ",
+        "price": 5.99,
+        "url": "https://d2luv1saso99wi.cloudfront.net/Bites_app_lg1549281642.jpeg"
+    },
+    {
+        "id": "10",
+        "title": "Chocolate Pie",
+        "description": "Chocolate ganache toasted oat pie from Four & Twenty Blackbirds hand spun with chocolate frozen custard, topped with croissant cookie crumbles",
+        "price": 6.89,
+        "url": "https://d2luv1saso99wi.cloudfront.net/2022-01_Q1_Shakes_App-Menu_Chocolate-Pie_1500x920_lg1643414610.jpeg"
+    },
+    {
+        "id": "11",
+        "title": "Wake & Shake",
+        "description": "Red Bay coffee hand spun with vanilla frozen custard, maple syrup, and orange zest, topped with whipped cream and orange candies",
+        "price": 6.89,
+        "url": "https://d2luv1saso99wi.cloudfront.net/2022-01_Q1_Shakes_App-Menu_Wake-Shake_1500x920_lg1643414687.jpeg"
+    },
+    {
+        "id": "12",
+        "title": "Floats",
+        "description": "Root beer, Purple Cow, Creamsicle®",
+        "price": 6.49,
+        "url": "https://d2luv1saso99wi.cloudfront.net/Root_Beer_Float_App_-_Web_Ordering_Kiosk_Menu_lg1551810320.jpeg"
+    }
+]

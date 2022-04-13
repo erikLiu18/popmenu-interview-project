@@ -8,9 +8,9 @@ export default function Menu({data}) {
             <div className='menu'>
                 {console.log(data)}
                 {data.map((item) => {
-                    const {id, title, description, price} = item;
+                    const {id, title, description, price, url} = item;
                     return (
-                        <Card key={id} id={id} title={title} description={description} price={price} />
+                        <Card key={id} id={id} title={title} description={description} price={price} url={url}/>
                     )
                 })}
             </div>
