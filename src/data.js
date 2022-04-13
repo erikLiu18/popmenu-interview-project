@@ -1,3 +1,4 @@
+
 const menu = [
     {
         id: '01',
@@ -72,3 +73,5 @@ const menu = [
         price: 6.49,
     },
 ]
+
+export default menu;
