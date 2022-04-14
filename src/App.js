@@ -22,11 +22,6 @@ function App() {
   const [url, setUrl] = React.useState("");
   const [render, setRender] = React.useState(false);
 
-
-  // const downloadImage = () => {
-  //   saveAs(url, './images/item_images' + (menu.length + 1) + '.jpg') // Put your image url here.
-  // }
-
   const handleClickOpen_ADD = () => {
     console.log(menu)
     setOpenAdd(true);
@@ -46,12 +41,6 @@ function App() {
     });
     setOpenAdd(false);
   };
-
-  // const deleteDialog = () => {
-  //   return {
-
-  //   }
-  // }
 
   const handleDelete = (itemId) => {
     menu = menu.filter(item => item.id !== itemId)
