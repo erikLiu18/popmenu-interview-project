@@ -12,6 +12,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+    align-items:center;
 }
 
 .card--desc {
@@ -27,4 +28,8 @@ h3 {
 
 p {
     margin: 5px;
+}
+
+IconButton {
+    max-width: 50px;
 }

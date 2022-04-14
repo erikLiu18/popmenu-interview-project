@@ -15,25 +15,28 @@ function App() {
 
   console.log(menu)
 
-  const [open, setOpen] = React.useState(false);
+  const [openAdd, setOpenAdd] = React.useState(false);
   const [name, setName] = React.useState("");
   const [price, setPrice] = React.useState(0.0);
   const [description, setDescription] = React.useState("");
   const [url, setUrl] = React.useState("");
+  const [render, setRender] = React.useState(false);
+
 
   // const downloadImage = () => {
   //   saveAs(url, './images/item_images' + (menu.length + 1) + '.jpg') // Put your image url here.
   // }
 
-  const handleClickOpen = () => {
-    setOpen(true);
+  const handleClickOpen_ADD = () => {
+    console.log(menu)
+    setOpenAdd(true);
   };
 
-  const handleClose = () => {
-    setOpen(false);
+  const handleClose_ADD = () => {
+    setOpenAdd(false);
   };
 
-  const handleFinish = () => {
+  const handleFinish_ADD = () => {
     menu.push({
         id: '' + (menu.length + 1),
         title: name,
@@ -41,17 +44,27 @@ function App() {
         price: price,
         url: url
     });
-    setOpen(false);
+    setOpenAdd(false);
   };
+
+  // const deleteDialog = () => {
+  //   return {
+
+  //   }
+  // }
+
+  const handleDelete = (itemId) => {
+    menu = menu.filter(item => item.id !== itemId)
+    setRender(!render)
+  }
 
   return (
     <div className="App">
       <Navbar />
       <div className="App--title">
         <h1 className="App--titleText">Our Menu</h1>
-
-        <button class="App--btn" onClick={handleClickOpen}>Create</button>
-        <Dialog open={open} onClose={handleClose}>
+        <button class="App--btn" onClick={handleClickOpen_ADD}>Create</button>
+        <Dialog open={openAdd} onClose={handleClose_ADD}>
           <DialogTitle>Create New Item</DialogTitle>
           <DialogContent>
             <DialogContentText>
@@ -68,7 +81,6 @@ function App() {
                 onChange={e => setName(e.target.value)}
               />
               <TextField
-                autoFocus
                 margin="normal"
                 id="price"
                 label="Price"
@@ -77,7 +89,6 @@ function App() {
                 onChange={e => setPrice(e.target.value)}
               />
               <TextField
-                autoFocus
                 margin="normal"
                 id="description"
                 multiline
@@ -88,7 +99,6 @@ function App() {
                 onChange={e => setDescription(e.target.value)}
               />
               <TextField
-                autoFocus
                 margin="normal"
                 id="url"
                 label="Image URL"
@@ -99,14 +109,14 @@ function App() {
             </div>
           </DialogContent>
           <DialogActions>
-            <Button onClick={handleClose}>Cancel</Button>
+            <Button onClick={handleClose_ADD}>Cancel</Button>
             <Button onClick={() => {
-                handleFinish();
+                handleFinish_ADD();
               }}>Finished</Button>
           </DialogActions>
         </Dialog>
       </div>
-      <Menu data={menu}/>
+      <Menu data={menu} onDelete={handleDelete}/>
     </div>
   );
 }
