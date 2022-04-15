@@ -31,7 +31,10 @@ export default function Card({id, title, description, price, url, onDelete}) {
     return (
         <div className="card">
             {/* <img className="card--img" alt="" src={require('../../images/item_images/' + id + '.jpeg')}/> */}
-            <img className="card--img" alt="" src={url}/>
+            <img className="card--img" alt="" src={url} onError={({ currentTarget }) => {
+                currentTarget.onerror = null; // prevents looping
+                currentTarget.src="https://cdn.dribbble.com/users/220914/screenshots/3896419/shake_shack_dribble.jpg?compress=1&resize=400x300";
+            }}/>
             <div className="card--title">
                 <h3>{title}</h3>
                 <p>${price}</p>

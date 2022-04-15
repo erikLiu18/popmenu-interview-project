@@ -32,14 +32,16 @@ function App() {
   };
 
   const handleFinish_ADD = () => {
-    menu.push({
-        id: '' + (menu.length + 1),
-        title: name,
-        description: description,
-        price: price,
-        url: url
-    });
-    setOpenAdd(false);
+    if (name !== "" && price > 0 && description !== "" && url !== "") {
+      menu.push({
+          id: '' + (menu.length + 1),
+          title: name,
+          description: description,
+          price: price,
+          url: url
+      });
+      setOpenAdd(false);
+    }
   };
 
   const handleDelete = (itemId) => {
