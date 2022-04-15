@@ -27,7 +27,7 @@ export default function Card({id, title, description, price, url, onDelete}) {
         setOpen(false);
     }
 
-    console.log(id);
+    // console.log(id);
     return (
         <div className="card">
             {/* <img className="card--img" alt="" src={require('../../images/item_images/' + id + '.jpeg')}/> */}
@@ -35,13 +35,13 @@ export default function Card({id, title, description, price, url, onDelete}) {
                 currentTarget.onerror = null; // prevents looping
                 currentTarget.src="https://cdn.dribbble.com/users/220914/screenshots/3896419/shake_shack_dribble.jpg?compress=1&resize=400x300";
             }}/>
-            <div className="card--title">
+            <div className="card--title" data-testid={"title-" + id}>
                 <h3>{title}</h3>
                 <p>${price}</p>
             </div>
             <p className="card--desc">{description}</p>
             <div>
-                <IconButton aria-label="delete" size="small" onClick={handleClickOpen}>
+                <IconButton aria-label="delete" size="small" onClick={handleClickOpen} data-testid={"delete-" + id}>
                     <DeleteIcon fontSize="inherit" />
                 </IconButton>
                 <Dialog
@@ -60,7 +60,7 @@ export default function Card({id, title, description, price, url, onDelete}) {
                     </DialogContent>
                     <DialogActions>
                     <Button onClick={handleClose}>No</Button>
-                    <Button onClick={handleDelete} autoFocus>
+                    <Button onClick={handleDelete} autoFocus data-testid="yes-btn">
                         Yes
                     </Button>
                     </DialogActions>

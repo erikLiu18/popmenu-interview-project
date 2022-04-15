@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {Menu, Navbar,} from './index.js';
-import menu from './data.json';
+import data from './data.json';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
@@ -13,7 +13,8 @@ import DialogTitle from '@mui/material/DialogTitle';
 
 function App() {
 
-  console.log(menu)
+  // console.log(menu)
+  const [menu, setMenu] = React.useState(data.map((x) => x));
 
   const [openAdd, setOpenAdd] = React.useState(false);
   const [name, setName] = React.useState("");
@@ -23,7 +24,7 @@ function App() {
   const [render, setRender] = React.useState(false);
 
   const handleClickOpen_ADD = () => {
-    console.log(menu)
+    // console.log(menu)
     setOpenAdd(true);
   };
 
@@ -32,21 +33,21 @@ function App() {
   };
 
   const handleFinish_ADD = () => {
-    if (name !== "" && price > 0 && description !== "" && url !== "") {
-      menu.push({
+    // if (name !== "" && price !== "" && description !== "" && url !== "") {
+      setMenu(menu.concat({
           id: '' + (menu.length + 1),
           title: name,
           description: description,
           price: price,
           url: url
-      });
+      }));
       setOpenAdd(false);
-    }
+    // }
   };
 
   const handleDelete = (itemId) => {
-    menu = menu.filter(item => item.id !== itemId)
-    setRender(!render)
+    setMenu(menu.filter(item => item.id !== itemId));
+    setRender(!render);
   }
 
   return (
@@ -54,7 +55,7 @@ function App() {
       <Navbar />
       <div className="App--title">
         <h1 className="App--titleText">Our Menu</h1>
-        <button class="App--btn" onClick={handleClickOpen_ADD}>Create</button>
+        <button className="App--btn" data-testid="add-button" onClick={handleClickOpen_ADD}>Create</button>
         <Dialog open={openAdd} onClose={handleClose_ADD}>
           <DialogTitle>Create New Item</DialogTitle>
           <DialogContent>
@@ -66,6 +67,7 @@ function App() {
                 autoFocus
                 margin="normal"
                 id="name"
+                inputProps={{ "data-testid": "name-field" }}
                 label="Name"
                 fullWidth
                 variant="outlined"
@@ -74,6 +76,7 @@ function App() {
               <TextField
                 margin="normal"
                 id="price"
+                inputProps={{ "data-testid": "price-field", "type": "number"}}
                 label="Price"
                 fullWidth
                 variant="outlined"
@@ -82,6 +85,7 @@ function App() {
               <TextField
                 margin="normal"
                 id="description"
+                inputProps={{ "data-testid": "description-field" }}
                 multiline
                 rows={4}
                 label="Description"
@@ -92,6 +96,7 @@ function App() {
               <TextField
                 margin="normal"
                 id="url"
+                inputProps={{ "data-testid": "url-field" }}
                 label="Image URL"
                 fullWidth
                 variant="outlined"
@@ -103,7 +108,9 @@ function App() {
             <Button onClick={handleClose_ADD}>Cancel</Button>
             <Button onClick={() => {
                 handleFinish_ADD();
-              }}>Finished</Button>
+              }}
+              data-testid="finish-button"
+              >Finish</Button>
           </DialogActions>
         </Dialog>
       </div>

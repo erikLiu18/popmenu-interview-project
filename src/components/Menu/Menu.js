@@ -6,7 +6,7 @@ export default function Menu({data, onDelete}) {
     return (
         <main>
             <div className='menu'>
-                {console.log(data)}
+                {/* {console.log(data)} */}
                 {data.map((item) => {
                     const {id, title, description, price, url} = item;
                     return (
