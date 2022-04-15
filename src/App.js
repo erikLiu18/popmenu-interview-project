@@ -35,7 +35,7 @@ function App() {
   const handleFinish_ADD = () => {
     // if (name !== "" && price !== "" && description !== "" && url !== "") {
       setMenu(menu.concat({
-          id: '' + (menu.length + 1),
+          id: '' + (parseInt(menu[menu.length-1].id) + 1),
           title: name,
           description: description,
           price: price,
