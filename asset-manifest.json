@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/popmenu-interview-project/static/css/main.4f99961f.css",
+    "main.js": "/popmenu-interview-project/static/js/main.189b2dfe.js",
+    "static/js/787.0dd9815b.chunk.js": "/popmenu-interview-project/static/js/787.0dd9815b.chunk.js",
+    "static/media/logo.png": "/popmenu-interview-project/static/media/logo.b1beb47c49207468f2c2.png",
+    "index.html": "/popmenu-interview-project/index.html",
+    "main.4f99961f.css.map": "/popmenu-interview-project/static/css/main.4f99961f.css.map",
+    "main.189b2dfe.js.map": "/popmenu-interview-project/static/js/main.189b2dfe.js.map",
+    "787.0dd9815b.chunk.js.map": "/popmenu-interview-project/static/js/787.0dd9815b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4f99961f.css",
+    "static/js/main.189b2dfe.js"
+  ]
+}
