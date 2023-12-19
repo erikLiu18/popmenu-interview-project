@@ -1,7 +1,9 @@
 # Popmenu Menu Project
 
-This is a menu of shakeshack. 
+This is a menu of Shake Shack. 
 
-To view my project, run npm start please. 
+To view the project, run `npm start`. 
 
-Referred https://github.com/gitname/react-gh-pages to publish react app as a git page. Run `npm run deploy`` to re-deploy git page after changes. 
+Run `npm run deploy` to re-deploy git page after changes. 
+
+Referred https://github.com/gitname/react-gh-pages to publish react app as a git page. 
